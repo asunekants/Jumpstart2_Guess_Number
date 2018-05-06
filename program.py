@@ -24,7 +24,10 @@ def compareGuess(number):
 def mainLoop():
   number = random.randint(0, 100)
   guess_correct = False
+  try_counter = 0
   while guess_correct == False:
     guess_correct = compareGuess(number)
+    try_counter += 1
+  print('You\'ve guessed the number in ' + str(try_counter) + ' guesses.')
 
 mainLoop()
