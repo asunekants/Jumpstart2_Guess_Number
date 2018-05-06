@@ -21,6 +21,7 @@ def compareGuess(number):
     print('Your guess is LOWER than the number; Guess again!')
     return False
 
+
 def mainLoop():
   number = random.randint(0, 100)
   guess_correct = False
@@ -29,5 +30,6 @@ def mainLoop():
     guess_correct = compareGuess(number)
     try_counter += 1
   print('You\'ve guessed the number in ' + str(try_counter) + ' guesses.')
+
 
 mainLoop()
