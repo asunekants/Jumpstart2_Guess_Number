@@ -1,10 +1,12 @@
 import random
 
+
 def header():
   print('--------------------------------------')
   print('        GUESS THAT NUMBER GAME')
   print('--------------------------------------')
   print()
+
 
 def compareGuess(number):
   guess_text = input('Guess a number between 0 and 100: ')
