@@ -1,9 +1,10 @@
 import random
 
-print('--------------------------------------')
-print('        GUESS THAT NUMBER GAME')
-print('--------------------------------------')
-print()
+def header():
+  print('--------------------------------------')
+  print('        GUESS THAT NUMBER GAME')
+  print('--------------------------------------')
+  print()
 
 def compareGuess(number):
   guess_text = input('Guess a number between 0 and 100: ')
@@ -23,13 +24,14 @@ def compareGuess(number):
 
 
 def mainLoop():
+  header()
   number = random.randint(0, 100)
   guess_correct = False
   try_counter = 0
   while guess_correct == False:
     guess_correct = compareGuess(number)
     try_counter += 1
-  print('You\'ve guessed the number in ' + str(try_counter) + ' guesses.')
+  print('You\'ve guessed the number in {0} guesses.'.format(try_counter))
 
 
 mainLoop()
