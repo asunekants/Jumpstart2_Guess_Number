@@ -21,10 +21,10 @@ def compareGuess(number):
     print('Your guess is LOWER than the number; Guess again!')
     return False
 
-def mainLoop(number):
+def mainLoop():
+  number = random.randint(0, 100)
   guess_correct = False
   while guess_correct == False:
     guess_correct = compareGuess(number)
 
-the_number = random.randint(0, 100)
-mainLoop(the_number)
+mainLoop()
